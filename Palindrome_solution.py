@@ -1,10 +1,13 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         
+        # remove space and lower string
         s = s.replace(" ", "").lower()
 
         left, right = 0, len(s) - 1
         while(left < right):
+            
+            # check if is alphanumeric 
             if not s[left].isalnum():
                 left = left + 1
                 continue
